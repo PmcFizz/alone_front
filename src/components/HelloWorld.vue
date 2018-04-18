@@ -5,18 +5,18 @@
     <ul>
       <li>
         <a
-          href="https://vuejs.org"
+          href="/wxdl/home"
           target="_blank"
         >
-          Core Docs
+          文心雕龙-首页
         </a>
       </li>
       <li>
         <a
-          href="https://forum.vuejs.org"
+          href="/wxdl/login"
           target="_blank"
         >
-          Forum
+          文心雕龙-登录
         </a>
       </li>
       <li>

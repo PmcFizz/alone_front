@@ -1,0 +1,46 @@
+@viewport {
+  width: device-width;
+}
+
+html {
+  background-color: #fff;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+* {
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: #6B6B6B;
+  font-family: apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  background: transparent;
+  color: #1E3562;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-display;
+  font-weight: normal;
+}

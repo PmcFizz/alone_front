@@ -10,6 +10,11 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'home',
+      component: _import('zc/zc_index')
+    },
+    {
+      path: '/',
       name: 'HelloWorld',
       component: HelloWorld
     },
@@ -32,6 +37,16 @@ export default new Router({
       path: '/wxdl/articleDetail',
       name: 'WxdlArticleDetail',
       component: _import('wxdl/ArticleDetail')
+    },
+    {
+      path: '/zc/index',
+      name: 'zcIndex',
+      component: _import('zc/zc_index')
+    },
+    {
+      path: '/zc/ask',
+      name: 'zcAsk',
+      component: _import('zc/zc_ask')
     }
   ]
 })
