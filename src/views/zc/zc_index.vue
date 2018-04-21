@@ -30,7 +30,7 @@
     </div>
   </div>
 </template>
-<script>
+ <script>
   import user_img from '../../assets/img/user_img2.jpg'
   export default {
     name: 'zcIndex',
@@ -40,8 +40,21 @@
         searchPlaceholder: '请输入你要查询的',
         searchWord: '',
         searchBtnText: '百度一下',
-        searchResultData: [{},{},{},{},{},{},{}],
-        user_img:user_img
+        searchResultData: [{}, {}, {}, {}, {}, {}, {}],
+        user_img: user_img
+      }
+    },
+    mounted(){
+
+    },
+    methods: {
+      // 搜索分页获取数据
+      getDataByPage(){
+
+      },
+      // 默认加载最新问答
+      getNewestInfo(){
+
       }
     }
   }
@@ -98,7 +111,7 @@
         margin-top: 20px;
         padding: 20px;
         .search_result_item {
-          float:left ;
+          float: left;
           min-height: 100px;
           max-height: 200px;
           border: 1px solid #ddd;
@@ -106,20 +119,20 @@
           padding: 12px 20px;
           text-align: left;
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
-          .user_info{
+          .user_info {
             display: block;
             width: 100%;
             text-align: left;
             margin-bottom: 12px;
-            .user_info_img{
+            .user_info_img {
               border-radius: 2px;
               vertical-align: top;
             }
-            .user_name{
+            .user_name {
               color: #444;
               font-weight: 600;
             }
-            .user_des{
+            .user_des {
               margin-top: 0;
               overflow: hidden;
               text-overflow: ellipsis;
@@ -128,8 +141,8 @@
               font-size: 14px;
             }
           }
-          .question_title{
-            float:left ;
+          .question_title {
+            float: left;
             display: block;
             color: #1a1a1a;
             font-weight: 600;
@@ -140,8 +153,8 @@
             margin-bottom: 9px;
             width: 100%;
           }
-          .answer{
-            float:left ;
+          .answer {
+            float: left;
             font-weight: 400;
             white-space: normal;
             margin-bottom: -4px;

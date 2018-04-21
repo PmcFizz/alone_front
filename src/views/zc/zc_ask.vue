@@ -7,20 +7,20 @@
       <div class="form-wrap">
         <form>
           <div class="form-controller">
-            <textarea class="question_title" placeholder="问题标题"></textarea>
+            <textarea class="question_title" v-model="askForm.title" placeholder="问题标题"></textarea>
           </div>
           <div class="form-controller">
-            <input class="question_company" placeholder="添加公司" type="text"/>
+            <input class="question_company" v-model="askForm.companyName" placeholder="添加公司" type="text"/>
           </div>
           <p class="question_des_tip">问题描述（可选）</p>
           <div class="form-controller">
-            <textarea class="question_des" placeholder="问题背景，条件等消息内容"></textarea>
+            <textarea class="question_des" v-model="askForm.questionDes" placeholder="问题背景，条件等消息内容"></textarea>
           </div>
           <p class="text_left">
-            <label class="isHideName"><input type="checkbox"/>匿名提问</label>
+            <label class="isHideName"><input v-model="askForm.isHideName" type="checkbox"/>匿名提问</label>
           </p>
           <p class="text_center">
-            <button class="sub_btn" type="button">提交问题</button>
+            <button class="sub_btn" @click="submitQuestion" type="button">提交问题</button>
           </p>
         </form>
       </div>
@@ -31,7 +31,23 @@
   export default {
     name: 'zcAsk',
     data () {
-      return {}
+      return {
+        askForm: {
+          title: '',
+          companyName: '',
+          questionDes: '',
+          isHideName: false
+        }
+      }
+    },
+    mounted(){
+
+    },
+    methods: {
+      // 提交问题
+      submitQuestion(){
+        console.log(this.askForm)
+      }
     }
   }
 </script>
@@ -141,12 +157,12 @@
           line-height: 25px;
           text-align: left;
         }
-        .isHideName{
+        .isHideName {
           color: #8590a6;
           margin-left: 5px;
           cursor: pointer;
         }
-        .sub_btn{
+        .sub_btn {
           width: 232px;
           margin-top: 28px;
           margin-right: auto;
