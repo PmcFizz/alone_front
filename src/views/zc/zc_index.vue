@@ -11,13 +11,27 @@
       </div>
       <div class="search_result">
         <div class="search_result_item" v-for="item in searchResultData">
-
+          <div class="user_info float-left">
+            <img height="24" width="24" class="user_info_img" :src="user_img"/>
+            <span class="user_name">是晚</span>
+            <span class="user_des">爱好吃喝拉撒睡</span>
+          </div>
+          <p class="question_title">深圳知云网络科技公司怎么样？</p>
+          <p class="answer">
+            当我们谈论这家公司的时候，其实我们是在谈论这家公司的制度，福利，领导的人品，以及未来的发展等等
+            首先说，这家公司的领导是真的没人品，以下离职员工讲述的几个事件。
+              当我们谈论这家公司的时候，其实我们是在谈论这家公司的制度，福利，领导的人品，以及未来的发展等等
+            首先说，这家公司的领导是真的没人品，以下离职员工讲述的几个事件。
+              当我们谈论这家公司的时候，其实我们是在谈论这家公司的制度，福利，领导的人品，以及未来的发展等等
+            首先说，这家公司的领导是真的没人品，以下离职员工讲述的几个事件。
+          </p>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+  import user_img from '../../assets/img/user_img2.jpg'
   export default {
     name: 'zcIndex',
     data () {
@@ -26,7 +40,8 @@
         searchPlaceholder: '请输入你要查询的',
         searchWord: '',
         searchBtnText: '百度一下',
-        searchResultData: [{},{},{},{},{},{},{}]
+        searchResultData: [{},{},{},{},{},{},{}],
+        user_img:user_img
       }
     }
   }
@@ -40,11 +55,10 @@
     height: 100%;
     .container {
       position: relative;
-      width: 1000px;
+      width: 750px;
       padding: 0 16px;
       margin: 10px auto;
       min-height: 200px;
-      border: 1px solid #0084ff;
       .log_wrap {
         width: 100%;
         text-align: center;
@@ -54,13 +68,15 @@
         }
       }
       .search_wrap {
+        width: 80%;
+        margin: 0 auto;
         .main_search_input {
           border: 1px solid #b6b6b6;
           background: #fff;
           display: inline-block;
           overflow: hidden;
           height: 34px;
-          width: 539px;
+          width: 80%;
           outline: none;
           padding-left: 5px;
         }
@@ -82,11 +98,59 @@
         margin-top: 20px;
         padding: 20px;
         .search_result_item {
+          float:left ;
           min-height: 100px;
           max-height: 200px;
           border: 1px solid #ddd;
           margin-bottom: 15px;
+          padding: 12px 20px;
+          text-align: left;
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
+          .user_info{
+            display: block;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 12px;
+            .user_info_img{
+              border-radius: 2px;
+              vertical-align: top;
+            }
+            .user_name{
+              color: #444;
+              font-weight: 600;
+            }
+            .user_des{
+              margin-top: 0;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              color: #646464;
+              font-size: 14px;
+            }
+          }
+          .question_title{
+            float:left ;
+            display: block;
+            color: #1a1a1a;
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-top: 0px;
+            margin-bottom: 9px;
+            width: 100%;
+          }
+          .answer{
+            float:left ;
+            font-weight: 400;
+            white-space: normal;
+            margin-bottom: -4px;
+            max-height: 42px;
+            margin-top: 0px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
         }
       }
     }
