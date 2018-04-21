@@ -13,6 +13,9 @@ html {
   &:after {
     box-sizing: inherit;
   }
+  outline: none;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
@@ -49,4 +52,13 @@ h6 {
 }
 .float-right{
   float: right;
+}
+.text_left{
+  text-align: left;
+}
+.text_right{
+  text-align: right;
+}
+.text_center{
+  text-align: center;
 }
