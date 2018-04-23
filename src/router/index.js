@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 
 const _import = require('./_import_' + process.env.NODE_ENV)
 
@@ -10,14 +9,14 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: _import('zc/zc_index')
+      name: 'zcLogin',
+      component: _import('zc/login')
     },
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
+    // {
+    //   path: '/',
+    //   name: 'HelloWorld',
+    //   component: HelloWorld
+    // },
     {
       path: '/wxdl',
       name: 'WxdlHome',
@@ -47,6 +46,16 @@ export default new Router({
       path: '/zc/ask',
       name: 'zcAsk',
       component: _import('zc/zc_ask')
+    },
+    {
+      path: '/zc/register',
+      name: 'zcRegister',
+      component: _import('zc/register')
+    },
+    {
+      path: '/zc/login',
+      name: 'zcLogin',
+      component: _import('zc/login')
     }
   ]
 })

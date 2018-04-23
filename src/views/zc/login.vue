@@ -1,14 +1,21 @@
 <!--用户登陆-->
 <template>
   <div class="zc_login">
-
+11111111111
   </div>
 </template>
 <script>
-  export default{
+  import { regiseterUser } from '@/api/zc/user/user'
+
+  export default {
     name: 'zcLogin',
-    data(){
+    data () {
       return {}
+    },
+    mounted () {
+      regiseterUser().then(res => {
+        console.log(res)
+      })
     },
     methods: {}
   }
