@@ -6,7 +6,7 @@ import fetch from '@/utils/fetch'
 
 /**
  * 注册用户
- * @id 公司id
+ * 用户数据
  **/
 export function regiseterUser (data) {
   return fetch({
