@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-  import { regiseterUser } from '@/api/zc/user/user'
+  import { regiseterUser } from '@/api/zc/user'
 
   export default {
     name: 'zcLogin',
