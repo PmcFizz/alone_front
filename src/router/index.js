@@ -9,8 +9,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'zcLogin',
-      component: _import('zc/login')
+      name: 'sjLogin',
+      component: _import('shijiang/login')
     },
     // {
     //   path: '/',
@@ -38,24 +38,24 @@ export default new Router({
       component: _import('wxdl/ArticleDetail')
     },
     {
-      path: '/zc/index',
-      name: 'zcIndex',
-      component: _import('zc/zc_index')
+      path: '/shijiang/index',
+      name: 'sjIndex',
+      component: _import('shijiang/sj_index')
     },
     {
-      path: '/zc/ask',
-      name: 'zcAsk',
-      component: _import('zc/zc_ask')
+      path: '/sj/ask',
+      name: 'sjAsk',
+      component: _import('shijiang/sj_ask')
     },
     {
-      path: '/zc/register',
-      name: 'zcRegister',
-      component: _import('zc/register')
+      path: '/sj/register',
+      name: 'sjRegister',
+      component: _import('shijiang/register')
     },
     {
-      path: '/zc/login',
-      name: 'zcLogin',
-      component: _import('zc/login')
+      path: '/sj/login',
+      name: 'sjLogin',
+      component: _import('shijiang/login')
     }
   ]
 })

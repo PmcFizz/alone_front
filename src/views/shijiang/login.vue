@@ -5,10 +5,10 @@
   </div>
 </template>
 <script>
-  import { regiseterUser } from '@/api/zc/user'
+  import { regiseterUser } from '@/api/sj/user'
 
   export default {
-    name: 'zcLogin',
+    name: 'sjLogin',
     data () {
       return {}
     },

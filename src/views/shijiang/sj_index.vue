@@ -33,7 +33,7 @@
  <script>
   import user_img from '../../assets/img/user_img2.jpg'
   export default {
-    name: 'zcIndex',
+    name: 'sjIndex',
     data () {
       return {
         logImgSrc: 'https://www.baidu.com/img/bd_logo1.png',

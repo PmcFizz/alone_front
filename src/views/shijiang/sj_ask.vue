@@ -29,7 +29,7 @@
 </template>
 <script>
   export default {
-    name: 'zcAsk',
+    name: 'sjAsk',
     data () {
       return {
         askForm: {
