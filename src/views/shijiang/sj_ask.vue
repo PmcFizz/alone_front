@@ -1,6 +1,6 @@
 <!--职场首页 -->
 <template>
-  <div class="zc_ask">
+  <div class="sj_ask">
     <div class="container">
       <h1 class="title">写下你的问题</h1>
       <p class="title_des">描述精确的问题更易得到解答</p>
@@ -52,7 +52,7 @@
   }
 </script>
 <style lang="scss">
-  .zc_ask {
+  .sj_ask {
     background-color: #fff;
     padding: 0;
     margin: 0;

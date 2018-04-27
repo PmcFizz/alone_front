@@ -1,6 +1,6 @@
 <!--职场首页 -->
 <template>
-  <div class="zc_index">
+  <div class="sj_index">
     <div class="container">
       <div class="log_wrap">
         <img :src="logImgSrc" width="270px" height="129px"/>
@@ -60,7 +60,7 @@
   }
 </script>
 <style lang="scss">
-  .zc_index {
+  .sj_index {
     background-color: #fff;
     padding: 0;
     margin: 0;
