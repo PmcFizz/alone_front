@@ -16,7 +16,7 @@ export function regiseterUser (data) {
 // 分页查询用户
 export function queryUserByPage (data) {
   return fetch({
-    url: '/api/user/queryAccountDetail',
+    url: '/api/user/query',
     method: 'post',
     data
   })

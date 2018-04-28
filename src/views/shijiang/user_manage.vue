@@ -1,43 +1,27 @@
-<!--注册用户-->
+<!--用户管理-->
 <template>
-  <div class="sj_register container">
-    <div class="form-wrap">
-      <form>
-        <div class="form-controller">
-          <input class="common-input" v-model="userInfo.name" placeholder="昵称" type="text"/>
-        </div>
-        <div class="form-controller">
-          <input class="common-input" v-model="userInfo.phoneNo" placeholder="手机号" type="text"/>
-        </div>
-        <div class="form-controller">
-          <input class="common-input" v-model="userInfo.email" placeholder="邮箱" type="text"/>
-        </div>
-        <div class="form-controller">
-          <input class="common-input" v-model="userInfo.password" placeholder="密码" type="password"/>
-        </div>
-      </form>
-      <p class="text_center">
-        <button class="sub_btn" @click="submitUserInfo" type="button">注册</button>
-      </p>
-      <!--展示注册的用户-->
-    </div>
+  <div class="sj_user_manage container">
+    <p v-for="item in userList">{{item.name}}***{{item.phoneNo}}***{{item.email}}</p>
   </div>
 </template>
 <script>
-  import { regiseterUser } from '@/api/sj/user'
+  import { queryUserByPage } from '@/api/sj/user'
 
   export default {
-    name: 'sjRegister',
+    name: 'sjUserManage',
     data () {
       return {
-        userInfo: {}
+        userList: {}
       }
+    },
+    mounted () {
+      this.submitUserInfo()
     },
     methods: {
       // 提交用户信息
       submitUserInfo () {
-        regiseterUser(this.userInfo).then(res => {
-          alert('创建成功')
+        queryUserByPage().then(res => {
+          this.userList = res.data.data
         })
       }
     }
