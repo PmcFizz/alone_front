@@ -30,18 +30,19 @@
     </div>
   </div>
 </template>
- <script>
+<script>
   import user_img from '../../assets/img/user_img2.jpg'
+  import logImgSrc from '../../assets/img/sj.png'
   export default {
     name: 'sjIndex',
     data () {
       return {
-        logImgSrc: 'https://www.baidu.com/img/bd_logo1.png',
+        logImgSrc,
         searchPlaceholder: '请输入你要查询的',
         searchWord: '',
-        searchBtnText: '百度一下',
+        searchBtnText: '反击一下',
         searchResultData: [{}, {}, {}, {}, {}, {}, {}],
-        user_img: user_img
+        user_img
       }
     },
     mounted(){
@@ -97,7 +98,7 @@
           display: inline-block;
           vertical-align: top;
           width: 100px;
-          height: 36px;
+          height: 34px;
           color: #fff;
           font-size: 15px;
           letter-spacing: 1px;

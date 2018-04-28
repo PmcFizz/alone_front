@@ -33,7 +33,7 @@ export default new Router({
       component: _import('wxdl/ArticleDetail')
     },
     {
-      path: '/shijiang/index',
+      path: '/sj/index',
       name: 'sjIndex',
       component: _import('shijiang/sj_index')
     },
