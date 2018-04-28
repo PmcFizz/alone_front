@@ -39,3 +39,12 @@ export function updateUserInfo (data) {
     data
   })
 }
+
+// 登录
+export function login (data) {
+  return fetch({
+    url: '/api/user/login',
+    method: 'post',
+    data
+  })
+}

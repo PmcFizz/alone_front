@@ -9,14 +9,9 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'sjLogin',
-      component: _import('shijiang/login')
+      name: 'sjRegister',
+      component: _import('shijiang/register')
     },
-    // {
-    //   path: '/',
-    //   name: 'HelloWorld',
-    //   component: HelloWorld
-    // },
     {
       path: '/wxdl',
       name: 'WxdlHome',

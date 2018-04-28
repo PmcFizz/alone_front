@@ -10,7 +10,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   @import './scss/_base.scss';
 
   #app {
