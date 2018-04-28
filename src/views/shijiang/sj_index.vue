@@ -38,7 +38,7 @@
     data () {
       return {
         logImgSrc,
-        searchPlaceholder: '请输入你要查询的',
+        searchPlaceholder: '请输入你要查询的公司',
         searchWord: '',
         searchBtnText: '反击一下',
         searchResultData: [{}, {}, {}, {}, {}, {}, {}],

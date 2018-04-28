@@ -4,7 +4,7 @@
     <div class="form-wrap">
       <form>
         <div class="form-controller">
-          <input class="common-input" v-model="userInfo.phone" placeholder="手机号或邮箱" type="text"/>
+          <input class="common-input" v-model="userInfo.phone" placeholder="手机号" type="text"/>
         </div>
         <div class="form-controller">
           <input class="common-input" v-model="userInfo.password" placeholder="密码" type="password"/>
