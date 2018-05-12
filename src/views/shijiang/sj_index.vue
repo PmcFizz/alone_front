@@ -6,8 +6,8 @@
         <img :src="logImgSrc" width="270px" height="129px" />
       </div>
       <div class="search_wrap">
-        <input :class="['main_search_input',focusState ? 'main_search_input_focus' : '']" :placeholder="searchPlaceholder" v-model="searchWord" @focus="focusState=true" @blur="focusState=false"/>
-        <span class="search_btn">{{searchBtnText}}</span>
+        <input :class="['main_search_input',focusState ? 'main_search_input_focus' : '']" :placeholder="searchPlaceholder" v-model="searchWord" @focus="focusState=true"
+               @blur="focusState=false"/><span class="search_btn">{{searchBtnText}}</span>
         <transition name="fade">
         <div class="search_recommend" v-if="focusState">
           <div class="search_recommend_item" v-for="item in searchRecommendData">
