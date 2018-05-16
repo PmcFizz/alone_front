@@ -12,6 +12,7 @@
 
 <style lang="scss">
   @import './scss/_base.scss';
+  @import './scss/shijiang/index.scss';
 
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
