@@ -56,6 +56,11 @@ export default new Router({
       path: '/sj/userManage',
       name: 'sjUserManage',
       component: _import('shijiang/user_manage')
+    },
+    {
+      path: '/sj/interfaceDoc',
+      name: 'sjInterfaceDoc',
+      component: _import('interfaceDoc/sj_interface')
     }
   ]
 })

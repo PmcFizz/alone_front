@@ -68,6 +68,30 @@ h6 {
   text-align: center;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.marginTop10 {
+  margin-top: 10px;
+}
+
+.marginBottom10 {
+  margin-bottom: 10px;
+}
+
+.marginLeft10 {
+  margin-left: 10px;
+}
+
+.marginRight10 {
+  margin-right: 10px;
+}
+
 .container {
   position: relative;
   width: 750px;
@@ -108,7 +132,7 @@ h6 {
         line-height: 24px;
         padding: 8px;
         border-radius: 4px;
-        &:focus{
+        &:focus {
           border: 1px solid #0084ff;
         }
       }
