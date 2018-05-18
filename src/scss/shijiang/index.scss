@@ -22,20 +22,7 @@
       width: 80%;
       margin: 0 auto;
       text-align: left;
-      position:relative;
-      .main_search_input {
-        border: 1px solid #b6b6b6;
-        background: #fff;
-        display: inline-block;
-        overflow: hidden;
-        height: 34px;
-        width: 80%;
-        outline: none;
-        padding-left: 5px;
-      }
-      .main_search_input_focus{
-        border: 1px solid #0084ff;
-      }
+      position: relative;
       .search_btn {
         display: inline-block;
         text-align: center;
@@ -48,32 +35,8 @@
         border: 1px solid #3385ff;
         background: #3385ff;
         line-height: 36px;
+        margin-left: -4px;
         cursor: pointer;
-      }
-      .search_recommend {
-        position:absolute;
-        background: #fff;
-        width: calc(80% + 5px);
-        border:1px solid transparent;
-        outline: none;
-        overflow: hidden;
-        margin-top: 2px;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12),
-        0 0 6px 0 rgba(0, 0, 0, 0.04);
-        transition: opacity 0.3s ease, transform 0.3s ease,
-        -webkit-transform 0.3s ease;
-        .search_recommend_item {
-          width: 100%;
-          padding: 3px 3px 3px 8px;
-          text-align: left;
-          height: 34px;
-          line-height: 34px;
-          box-sizing: border-box;
-          &:hover {
-            background-color: #f6f6f6;
-            cursor: pointer;
-          }
-        }
       }
     }
     .search_result {
@@ -88,7 +51,7 @@
         padding: 12px 20px;
         text-align: left;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12),
-        0 0 6px 0 rgba(0, 0, 0, 0.04);
+          0 0 6px 0 rgba(0, 0, 0, 0.04);
         .user_info {
           display: block;
           width: 100%;
@@ -137,8 +100,9 @@
     }
   }
 }
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;

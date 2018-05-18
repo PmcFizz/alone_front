@@ -6,36 +6,39 @@
         <img :src="logImgSrc" width="270px" height="129px" />
       </div>
       <div class="search_wrap">
-        <input :class="['main_search_input',focusState ? 'main_search_input_focus' : '']" :placeholder="searchPlaceholder" v-model="searchWord" @focus="focusState=true"
-               @blur="focusState=false"/><span class="search_btn">{{searchBtnText}}</span>
-        <transition name="fade">
-        <div class="search_recommend" v-if="focusState">
-          <div class="search_recommend_item" v-for="item in searchRecommendData">
-            <p>1111111</p>
-          </div>
-        </div>
-        </transition>
+        <sj-input-search v-model="searchWord" :placeholder="searchPlaceholder" :options="filteredList" @getSelectedOption="getSelectedOption" width="80%">
+          <template slot-scope="{option}">
+            <span>{{option.name}}</span>
+          </template>
+        </sj-input-search>
+        <span class="search_btn" @click="showDialog=true">{{searchBtnText}}</span>
       </div>
       <div class="search_result">
         <div class="search_result_item" v-for="item in searchResultData">
           <div class="user_info float-left">
-            <img height="24" width="24" class="user_info_img" :src="user_img"/>
+            <img height="24" width="24" class="user_info_img" :src="user_img" />
             <span class="user_name">是晚</span>
             <span class="user_des">爱好吃喝拉撒睡</span>
           </div>
           <p class="question_title">深圳xxxxxxx公司怎么样？</p>
           <p class="answer">
-            当我们谈论这家公司的时候，其实我们是在谈论这家公司的制度，福利，领导的人品，以及未来的发展等等
-            首先说。。。。。。。。。。。
+            当我们谈论这家公司的时候，其实我们是在谈论这家公司的制度，福利，领导的人品，以及未来的发展等等 首先说。。。。。。。。。。。
           </p>
         </div>
       </div>
     </div>
+    <!-- 弹出窗 -->
+    <sj-dialog :visible.sync="showDialog" title="欢迎" @confirm="confirm">
+      <div>hello visitor</div>
+    </sj-dialog>
   </div>
 </template>
 <script>
-import user_img from '../../assets/img/user_img2.jpg';
-import logImgSrc from '../../assets/img/sj.png';
+import user_img from "../../assets/img/user_img2.jpg";
+import logImgSrc from "../../assets/img/sj.png";
+import { queryCompanyByPage } from "@/api/sj/company";
+import SjDialog from "@/components/common/SjDialog";
+import SjInputSearch from "@/components/common/SjInputSearch";
 export default {
   name: "sjIndex",
   data() {
@@ -46,17 +49,155 @@ export default {
       searchBtnText: "反击一下",
       searchResultData: [{}, {}, {}, {}, {}, {}, {}],
       user_img,
-      searchRecommendData: [{}, {}, {}, {}, {}, {}, {}],
-      focusState: false
+      showDialog: false,
+      filteredList: []
     };
   },
-  mounted() {},
+  components: {
+    SjDialog,
+    SjInputSearch
+  },
+  watch: {
+    searchWord: {
+      handler(newVal) {
+        let self = this;
+        queryCompanyByPage({
+          name: newVal
+        }).then(res => {
+          if (res.status === 200) {
+            self.filteredList = res.data.data;
+          } else {
+            self.filteredList = [];
+          }
+        });
+      },
+      immediate: true
+    }
+  },
   methods: {
     // 搜索分页获取数据
     getDataByPage() {},
     // 默认加载最新问答
     getNewestInfo() {},
+    // 获取选中的数据
+    getSelectedOption(obj) {
+      this.searchWord = obj.name;
+      console.log("selected", obj);
+    },
+    confirm() {
+      alert(1);
+    }
+  }
+};
+</script>
+<style lang="scss">
+.sj_index {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  .container {
+    position: relative;
+    width: 750px;
+    padding: 0 16px;
+    margin: 10px auto;
+    min-height: 200px;
+    .log_wrap {
+      width: 100%;
+      text-align: center;
+      img {
+        width: 270px;
+        height: 129px;
+      }
+    }
+    .search_wrap {
+      width: 80%;
+      margin: 0 auto;
+      text-align: left;
+      position: relative;
+      .search_btn {
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        width: 100px;
+        height: 34px;
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: 1px;
+        border: 1px solid #3385ff;
+        background: #3385ff;
+        line-height: 36px;
+        margin-left: -4px;
+        cursor: pointer;
+      }
+    }
+    .search_result {
+      margin-top: 20px;
+      padding: 20px;
+      .search_result_item {
+        float: left;
+        min-height: 100px;
+        max-height: 200px;
+        border: 1px solid #ddd;
+        margin-bottom: 15px;
+        padding: 12px 20px;
+        text-align: left;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12),
+          0 0 6px 0 rgba(0, 0, 0, 0.04);
+        .user_info {
+          display: block;
+          width: 100%;
+          text-align: left;
+          margin-bottom: 12px;
+          .user_info_img {
+            border-radius: 2px;
+            vertical-align: top;
+          }
+          .user_name {
+            color: #444;
+            font-weight: 600;
+          }
+          .user_des {
+            margin-top: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #646464;
+            font-size: 14px;
+          }
+        }
+        .question_title {
+          float: left;
+          display: block;
+          color: #1a1a1a;
+          font-weight: 600;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin-top: 0px;
+          margin-bottom: 9px;
+          width: 100%;
+        }
+        .answer {
+          float: left;
+          font-weight: 400;
+          white-space: normal;
+          margin-bottom: -4px;
+          max-height: 42px;
+          margin-top: 0px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
   }
 }
-</script>
-
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+</style>

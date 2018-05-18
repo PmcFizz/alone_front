@@ -22,6 +22,15 @@ export function commonQuery (data) {
   })
 }
 
+// 分页查询公司
+export function queryCompanyByPage (data) {
+  return fetch({
+    url: '/api/company/queryByPage',
+    method: 'post',
+    data
+  })
+}
+
 // 单个创建
 export function createOne (data) {
   return fetch({
