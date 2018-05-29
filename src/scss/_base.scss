@@ -153,5 +153,8 @@ h6 {
     padding: 2px 5px;
     color: #fff;
     background-color: #0084ff;
+    &:hover{
+      background-color:rgba(0, 132, 255, 0.94);
+    }
   }
 }
