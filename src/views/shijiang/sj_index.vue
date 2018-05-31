@@ -37,8 +37,6 @@
 import user_img from "../../assets/img/user_img2.jpg";
 import logImgSrc from "../../assets/img/sj.png";
 import { queryCompanyByPage } from "@/api/sj/company";
-import SjDialog from "@/components/common/SjDialog";
-import SjInputSearch from "@/components/common/SjInputSearch";
 export default {
   name: "sjIndex",
   data() {
@@ -52,10 +50,6 @@ export default {
       showDialog: false,
       filteredList: []
     };
-  },
-  components: {
-    SjDialog,
-    SjInputSearch
   },
   watch: {
     searchWord: {

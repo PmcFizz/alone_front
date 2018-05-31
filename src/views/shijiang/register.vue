@@ -31,13 +31,9 @@
 </template>
 <script>
 import { regiseterUser } from "@/api/sj/user";
-import SjDialog from "@/components/common/SjDialog";
 
 export default {
   name: "sjRegister",
-  components: {
-    SjDialog
-  },
   data() {
     return {
       // 弹窗
