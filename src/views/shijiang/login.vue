@@ -25,13 +25,9 @@
 </template>
 <script>
 import { login } from "@/api/sj/user";
-import SjDialog from "@/components/common/SjDialog";
 
 export default {
   name: "sjLogin",
-  components: {
-    SjDialog
-  },
   data() {
     return {
       // 弹窗

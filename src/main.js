@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// 引入共用的组件
+import commComps from './components'
+Vue.use(commComps)
 
 Vue.config.productionTip = false
 
