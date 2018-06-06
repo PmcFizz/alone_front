@@ -20,6 +20,11 @@
   这个项目是师匠的的前端项目,使用vue-cli创建完成,主要技术栈有vue,vue-router,webpack,sass,
   目前还没有引入主流的UI框架,该项目力求设计简单,界面以大方简洁已操作为准,多使用组件
   首页/#/shijiang/index
+  
+# 项目截图
+<img width="600" src="./src/assets/sj_showtime/login.png" />
+<img width="600" src="./src/assets/sj_showtime/register.png" />
+<img width="600" src="./src/assets/sj_showtime/home.png" />
 
 
 # 开发须知:

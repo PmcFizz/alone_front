@@ -59,7 +59,7 @@ export default {
           name: newVal
         }).then(res => {
           if (res.status === 200) {
-            self.filteredList = res.data.data;
+            self.filteredList = res.data.data.records;
           } else {
             self.filteredList = [];
           }
