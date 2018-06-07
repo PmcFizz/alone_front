@@ -51,7 +51,7 @@
     }
   }
 </script>
-<style lang="scss">
+<style lang="less">
   .sj_ask {
     background-color: #fff;
     padding: 0;

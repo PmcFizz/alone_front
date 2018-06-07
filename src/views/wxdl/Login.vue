@@ -8,10 +8,10 @@
     name: 'WxdlLogin'
   }
 </script>
-<style lang="scss" scoped>
-  $red: red;
+<style lang="less" scoped>
+  @red: red;
   div {
-    color: $red;
+    color: @red;
     p {
       font-size: 20px;
     }

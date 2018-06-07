@@ -2,25 +2,20 @@
 <template>
   <div class="container sj_login">
     <div class="form-wrap">
-      <form>
-        <div class="form-controller">
-          <input class="common-input" v-model="userInfo.phoneNo" placeholder="手机号" type="text" />
-        </div>
-        <div class="form-controller">
-          <input class="common-input" v-model="userInfo.password" placeholder="密码" type="password" />
-        </div>
-      </form>
-      <p class="text_center">
-        <button class="sub_btn" @click="login()" type="button">登录</button>
-      </p>
-      <p class="text_center">
-        <button class="sub_btn" @click="toRegister" type="button">去注册</button>
+      <Form ref="form" :model="userInfo">
+        <FormItem label="" prop="phoneNo">
+          <Input type="text" v-model="userInfo.phoneNo"></Input>
+        </FormItem>
+        <FormItem label="" prop="password">
+          <Input type="password" v-model="userInfo.password"></Input>
+        </FormItem>
+        <FormItem>
+          <Button type="primary" @click="login" long>登录</Button>
+          <Button type="ghost" @click="toRegister" style="margin-top:10px" long>去注册</Button>
+        </FormItem>
+      </Form>
       </p>
     </div>
-    <!-- 弹出窗 -->
-    <sj-dialog :visible.sync="dialog.show" :title="dialog.title" @confirm="dialog.cb">
-      <div>{{dialog.msg}}</div>
-    </sj-dialog>
   </div>
 </template>
 <script>
@@ -30,15 +25,6 @@ export default {
   name: "sjLogin",
   data() {
     return {
-      // 弹窗
-      dialog: {
-        show: false,
-        title: "提示",
-        msg: "",
-        cb() {
-          //
-        }
-      },
       userInfo: {}
     };
   },
@@ -50,26 +36,19 @@ export default {
     },
     // 去登录
     login() {
-      let self = this
+      let self = this;
+      self.$Spin.show();
       login(this.userInfo).then(res => {
-        // alert('登录成功')
         let data = res.data.data;
-        self.dialog.show = true;
         if (res.data.code === 200) {
-          // 注册成功
-          let i = 3;
-          let timer = null;
-          let msg = `注册成功！页面将于${i}秒后跳转...`;
-          self.dialog.msg = msg;
-          setInterval(function() {
-            self.dialog.msg = `注册成功！页面将于${i}秒后跳转...`;
-            if (!i--) {
-              clearInterval(timer);
-              self.$router.push({ name: "sjIndex" });
-            }
+          // 登录成功
+          setTimeout(function() {
+            self.$Spin.hide();
+            self.$router.push({ name: "sjIndex" });
           }, 1000);
         } else {
-          self.dialog.msg = data.msg;
+          self.$Spin.hide();
+          this.$Message.error(data.msg);
         }
       });
     }

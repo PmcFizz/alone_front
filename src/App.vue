@@ -10,13 +10,12 @@
   }
 </script>
 
-<style lang="scss">
-  @import './scss/style.scss';
+<style lang="less">
+  @import './less/style.less';
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
-    margin-top: 20px;
   }
 </style>

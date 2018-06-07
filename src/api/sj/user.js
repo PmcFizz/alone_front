@@ -48,3 +48,12 @@ export function login (data) {
     data
   })
 }
+
+// 查询当前登录人的信息
+export function queryMyInfo (data) {
+  return fetch({
+    url: '/api/user/queryMyInfo',
+    method: 'post',
+    data
+  })
+}

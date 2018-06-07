@@ -3,11 +3,20 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// 引入共用的组件
-import commComps from './components'
-Vue.use(commComps)
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
+Vue.use(iView)
 
 Vue.config.productionTip = false
+
+router.beforeEach((to, from, next) => {
+  iView.LoadingBar.start()
+  next()
+})
+
+router.afterEach(route => {
+  iView.LoadingBar.finish()
+})
 
 /* eslint-disable no-new */
 new Vue({

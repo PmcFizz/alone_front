@@ -1,17 +1,33 @@
 <!--职场首页 -->
 <template>
   <div class="sj_index">
+    <Header class="sj_header">
+      <div class="sj_user_box">
+        <div v-if="isLogin">
+          <Avatar icon="person" class="avatar"/>
+          <a>{{userInfo.nickName}}</a>
+        </div>
+        <div v-else>
+          <router-link :to="{name:'sjLogin'}">登录</router-link>
+          <router-link :to="{name:'sjRegister'}">注册</router-link>
+        </div>
+      </div>
+    </Header>
     <div class="container">
       <div class="log_wrap">
         <img :src="logImgSrc" width="270px" height="129px" />
       </div>
       <div class="search_wrap">
-        <sj-input-search v-model="searchWord" :placeholder="searchPlaceholder" :options="filteredList" @getSelectedOption="getSelectedOption" width="80%">
-          <template slot-scope="{option}">
-            <span>{{option.name}}</span>
-          </template>
-        </sj-input-search>
-        <span class="search_btn" @click="showDialog=true">{{searchBtnText}}</span>
+        <Row>
+          <Col span="18" style="padding-right:10px">
+          <Select v-model="searchWord" :placeholder="searchPlaceholder" filterable remote :remote-method="remoteMethod" :loading="loading1">
+            <Option v-for="option in filteredList" :value="option.name" :key="option._id">{{option.name}}</Option>
+          </Select>
+          </Col>
+          <Col span="6">
+          <span class="search_btn" @click="showDialog=true">{{searchBtnText}}</span>
+          </Col>
+        </Row>
       </div>
       <div class="search_result">
         <div class="search_result_item" v-for="item in searchResultData">
@@ -27,20 +43,20 @@
         </div>
       </div>
     </div>
-    <!-- 弹出窗 -->
-    <sj-dialog :visible.sync="showDialog" title="欢迎" @confirm="confirm">
-      <div>hello visitor</div>
-    </sj-dialog>
   </div>
 </template>
 <script>
 import user_img from "../../assets/img/user_img2.jpg";
 import logImgSrc from "../../assets/img/sj.png";
+import { queryMyInfo } from "@/api/sj/user";
 import { queryCompanyByPage } from "@/api/sj/company";
 export default {
   name: "sjIndex",
   data() {
     return {
+      isLogin: false,
+      userInfo:{},
+      loading1: false,
       logImgSrc,
       searchPlaceholder: "请输入你要查询的公司",
       searchWord: "",
@@ -68,6 +84,15 @@ export default {
       immediate: true
     }
   },
+  mounted() {
+    let self = this
+    queryMyInfo({}).then(res => {
+      if (res.status === 200) {
+        self.isLogin = true
+        self.userInfo = res.data.data[0];
+      }
+    });
+  },
   methods: {
     // 搜索分页获取数据
     getDataByPage() {},
@@ -77,6 +102,25 @@ export default {
     getSelectedOption(obj) {
       this.searchWord = obj.name;
       console.log("selected", obj);
+    },
+    remoteMethod(query) {
+      if (query !== "") {
+        this.loading1 = true;
+        setTimeout(() => {
+          this.loading1 = false;
+          const list = this.list.map(item => {
+            return {
+              value: item,
+              label: item
+            };
+          });
+          this.options1 = list.filter(
+            item => item.label.toLowerCase().indexOf(query.toLowerCase()) > -1
+          );
+        }, 200);
+      } else {
+        this.options1 = [];
+      }
     },
     confirm() {
       alert(1);

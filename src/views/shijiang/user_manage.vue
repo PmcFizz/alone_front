@@ -27,7 +27,7 @@
     }
   }
 </script>
-<style lang="scss">
+<style lang="less">
   .container {
     position: relative;
     width: 750px;
