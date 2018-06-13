@@ -49,6 +49,15 @@ export function login (data) {
   })
 }
 
+// 注销
+export function logout (data) {
+  return fetch({
+    url: '/api/user/logout',
+    method: 'post',
+    data
+  })
+}
+
 // 查询当前登录人的信息
 export function queryMyInfo (data) {
   return fetch({

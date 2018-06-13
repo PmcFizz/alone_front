@@ -4,8 +4,16 @@
     <Header class="sj_header">
       <div class="sj_user_box">
         <div v-if="isLogin">
-          <Avatar icon="person" class="avatar"/>
-          <a>{{userInfo.nickName}}</a>
+          <Dropdown style="margin-left: 20px">
+            <a href="javascript:void(0)">
+              <Avatar icon="person" class="avatar" />
+              <span>{{userInfo.nickName}}</span>
+            </a>
+            <DropdownMenu slot="list">
+              <DropdownItem>我的信息</DropdownItem>
+              <DropdownItem @click.native="logout()">注销</DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
         </div>
         <div v-else>
           <router-link :to="{name:'sjLogin'}">登录</router-link>
@@ -48,14 +56,14 @@
 <script>
 import user_img from "../../assets/img/user_img2.jpg";
 import logImgSrc from "../../assets/img/sj.png";
-import { queryMyInfo } from "@/api/sj/user";
+import { queryMyInfo, logout } from "@/api/sj/user";
 import { queryCompanyByPage } from "@/api/sj/company";
 export default {
   name: "sjIndex",
   data() {
     return {
       isLogin: false,
-      userInfo:{},
+      userInfo: {},
       loading1: false,
       logImgSrc,
       searchPlaceholder: "请输入你要查询的公司",
@@ -85,10 +93,10 @@ export default {
     }
   },
   mounted() {
-    let self = this
+    let self = this;
     queryMyInfo({}).then(res => {
       if (res.status === 200) {
-        self.isLogin = true
+        self.isLogin = true;
         self.userInfo = res.data.data[0];
       }
     });
@@ -121,6 +129,18 @@ export default {
       } else {
         this.options1 = [];
       }
+    },
+    logout(){
+      let self = this;
+      logout().then(res => {
+        let data = res.data.data;
+        if (res.data.code === 200) {
+          // 注销成功
+          document.location.reload()
+        } else {
+          this.$Message.error(data.msg);
+        }
+      });
     },
     confirm() {
       alert(1);
