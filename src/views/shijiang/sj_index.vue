@@ -5,12 +5,12 @@
       <div class="sj_user_box">
         <div v-if="isLogin">
           <Dropdown style="margin-left: 20px">
-            <a href="javascript:void(0)">
+            <a href="javascript:void(0)" @click="jumpTo('userManage')">
               <Avatar icon="person" class="avatar" />
               <span>{{userInfo.nickName}}</span>
             </a>
             <DropdownMenu slot="list">
-              <DropdownItem>我的信息</DropdownItem>
+              <DropdownItem @click.native="jumpTo('userManage')">我的信息</DropdownItem>
               <DropdownItem @click.native="logout()">注销</DropdownItem>
             </DropdownMenu>
           </Dropdown>
@@ -33,22 +33,36 @@
           </Select>
           </Col>
           <Col span="6">
-          <span class="search_btn" @click="showDialog=true">{{searchBtnText}}</span>
+          <span class="search_btn" @click="search">{{searchBtnText}}</span>
           </Col>
         </Row>
       </div>
       <div class="search_result">
-        <div class="search_result_item" v-for="item in searchResultData">
-          <div class="user_info float-left">
-            <img height="24" width="24" class="user_info_img" :src="user_img" />
-            <span class="user_name">是晚</span>
-            <span class="user_des">爱好吃喝拉撒睡</span>
+        <template v-if="searchResultData.length>0">
+          <div class="search_result_item" v-for="item in searchResultData">
+            <Card class="user_info float-left">
+              <p slot="title">
+                <img height="24" width="24" class="user_info_img" :src="user_img" />
+                <span class="user_name">是晚</span>
+                <span class="user_des">爱好吃喝拉撒睡</span>
+              </p>
+              <!-- <a href="#" slot="extra" @click.prevent="changeLimit">
+              <Icon type="ios-loop-strong"></Icon>
+              Change
+            </a> -->
+              <p class="question_title">深圳xxxxxxx公司怎么样？</p>
+              <p class="answer">
+                当我们谈论这家公司的时候，其实我们是在谈论这家公司的制度，福利，领导的人品，以及未来的发展等等 首先说。。。。。。。。。。。
+              </p>
+            </Card>
           </div>
-          <p class="question_title">深圳xxxxxxx公司怎么样？</p>
-          <p class="answer">
-            当我们谈论这家公司的时候，其实我们是在谈论这家公司的制度，福利，领导的人品，以及未来的发展等等 首先说。。。。。。。。。。。
-          </p>
-        </div>
+        </template>
+        <template v-else>
+          <Card class="nocomments">
+            <p><span class="curCompany">{{curCompany.name}}</span>公司目前还没有评论哦！╮(๑•́ ₃•̀๑)╭</p>
+            <Button type="primary">我来评论~</Button>
+          </Card>
+        </template>
       </div>
     </div>
   </div>
@@ -57,47 +71,35 @@
 import user_img from "../../assets/img/user_img2.jpg";
 import logImgSrc from "../../assets/img/sj.png";
 import { queryMyInfo, logout } from "@/api/sj/user";
-import { queryCompanyByPage } from "@/api/sj/company";
+import { queryCompanyByKeyWord } from "@/api/sj/company";
 export default {
   name: "sjIndex",
   data() {
     return {
       isLogin: false,
-      userInfo: {},
+      userInfo: {
+        nickName: ""
+      },
       loading1: false,
       logImgSrc,
       searchPlaceholder: "请输入你要查询的公司",
       searchWord: "",
       searchBtnText: "反击一下",
-      searchResultData: [{}, {}, {}, {}, {}, {}, {}],
+      searchResultData: [{},{},{},{},{}],
       user_img,
       showDialog: false,
-      filteredList: []
+      filteredList: [],
+      // 选中的公司
+      curCompany:{}
     };
-  },
-  watch: {
-    searchWord: {
-      handler(newVal) {
-        let self = this;
-        queryCompanyByPage({
-          name: newVal
-        }).then(res => {
-          if (res.status === 200) {
-            self.filteredList = res.data.data.records;
-          } else {
-            self.filteredList = [];
-          }
-        });
-      },
-      immediate: true
-    }
   },
   mounted() {
     let self = this;
     queryMyInfo({}).then(res => {
-      if (res.status === 200) {
+      let data = res.data.data;
+      if (res.data.code === 200) {
         self.isLogin = true;
-        self.userInfo = res.data.data[0];
+        self.userInfo = res.data.data;
       }
     });
   },
@@ -108,35 +110,41 @@ export default {
     getNewestInfo() {},
     // 获取选中的数据
     getSelectedOption(obj) {
+      this.curCompany = obj;
       this.searchWord = obj.name;
       console.log("selected", obj);
     },
+    // 搜索
+    search(){
+      // 此处会有个接口
+      this.searchResultData = []
+    },
     remoteMethod(query) {
+      let self = this;
       if (query !== "") {
         this.loading1 = true;
-        setTimeout(() => {
-          this.loading1 = false;
-          const list = this.list.map(item => {
-            return {
-              value: item,
-              label: item
-            };
-          });
-          this.options1 = list.filter(
-            item => item.label.toLowerCase().indexOf(query.toLowerCase()) > -1
-          );
-        }, 200);
+        queryCompanyByKeyWord({
+          name: query
+        }).then(res => {
+          let data = res.data.data;
+          if (res.data.code === 200) {
+            this.loading1 = false;
+            self.filteredList = data;
+          } else {
+            self.filteredList = [];
+          }
+        });
       } else {
-        this.options1 = [];
+        this.filteredList = [];
       }
     },
-    logout(){
+    logout() {
       let self = this;
       logout().then(res => {
         let data = res.data.data;
         if (res.data.code === 200) {
           // 注销成功
-          document.location.reload()
+          document.location.reload();
         } else {
           this.$Message.error(data.msg);
         }
@@ -144,6 +152,10 @@ export default {
     },
     confirm() {
       alert(1);
+    },
+    // 路由跳转
+    jumpTo(name) {
+      this.$router.push(name);
     }
   }
 };

@@ -34,7 +34,7 @@ export function queryUserById (data) {
 // 更新用户信息
 export function updateUserInfo (data) {
   return fetch({
-    url: '/api/user/queryAccountDetail',
+    url: '/api/user/updateOneUser',
     method: 'post',
     data
   })

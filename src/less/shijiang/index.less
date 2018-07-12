@@ -1,127 +1,132 @@
 .sj_index {
-  background-color: #fff;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  .container {
-    position: relative;
-    width: 750px;
-    padding: 0 16px;
-    margin: 10px auto;
-    min-height: 200px;
-    .log_wrap {
-      width: 100%;
-      text-align: center;
-      img {
-        width: 270px;
-        height: 129px;
-      }
-    }
-    .search_wrap {
-      width: 80%;
-      margin: 0 auto;
-      text-align: left;
-      position: relative;
-      .search_btn {
-        display: inline-block;
-        text-align: center;
-        vertical-align: top;
-        width: 100px;
-        height: 34px;
-        color: #fff;
-        font-size: 15px;
-        letter-spacing: 1px;
-        border: 1px solid #3385ff;
-        background: #3385ff;
-        line-height: 36px;
-        margin-left: -4px;
-        cursor: pointer;
-      }
-    }
-    .search_result {
-      margin-top: 20px;
-      padding: 20px;
-      .search_result_item {
-        float: left;
-        min-height: 100px;
-        max-height: 200px;
-        border: 1px solid #ddd;
-        margin-bottom: 15px;
-        padding: 12px 20px;
-        text-align: left;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12),
-          0 0 6px 0 rgba(0, 0, 0, 0.04);
-        .user_info {
-          display: block;
-          width: 100%;
-          text-align: left;
-          margin-bottom: 12px;
-          .user_info_img {
-            border-radius: 2px;
-            vertical-align: top;
-          }
-          .user_name {
-            color: #444;
-            font-weight: 600;
-          }
-          .user_des {
-            margin-top: 0;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            color: #646464;
-            font-size: 14px;
-          }
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    .container {
+        position: relative;
+        width: 750px;
+        padding: 64px 16px 0;
+        margin: 10px auto;
+        min-height: 200px;
+        .log_wrap {
+            width: 100%;
+            text-align: center;
+            img {
+                width: 270px;
+                height: 129px;
+            }
         }
-        .question_title {
-          float: left;
-          display: block;
-          color: #1a1a1a;
-          font-weight: 600;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          margin-top: 0px;
-          margin-bottom: 9px;
-          width: 100%;
+        .search_wrap {
+            width: 80%;
+            margin: 0 auto;
+            text-align: left;
+            position: relative;
+            .search_btn {
+                display: inline-block;
+                text-align: center;
+                vertical-align: top;
+                width: 100px;
+                height: 34px;
+                color: #fff;
+                font-size: 15px;
+                letter-spacing: 1px;
+                border: 1px solid #3385ff;
+                background: #3385ff;
+                line-height: 36px;
+                margin-left: -4px;
+                cursor: pointer;
+            }
         }
-        .answer {
-          float: left;
-          font-weight: 400;
-          white-space: normal;
-          margin-bottom: -4px;
-          max-height: 42px;
-          margin-top: 0px;
-          overflow: hidden;
-          text-overflow: ellipsis;
+        .search_result {
+            margin-top: 20px;
+            padding: 20px;
+            .search_result_item {
+                float: left;
+                min-height: 100px;
+                max-height: 400px;
+                margin-bottom: 15px;
+                text-align: left;
+                .user_info_img {
+                    border-radius: 2px;
+                    vertical-align: top;
+                }
+                .user_name {
+                    color: #444;
+                    font-weight: 600;
+                }
+                .user_des {
+                    margin-top: 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    color: #646464;
+                    font-size: 14px;
+                }
+                .question_title {
+                    display: block;
+                    color: #1a1a1a;
+                    font-weight: 600;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    margin-top: 0px;
+                    margin-bottom: 9px;
+                    width: 100%;
+                }
+                .answer {
+                    font-weight: 400;
+                    white-space: normal;
+                    margin-bottom: -4px;
+                    max-height: 42px;
+                    margin-top: 0px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            .nocomments{
+              text-align: center;
+              .curCompany{
+                color:#3385ff;
+                font-size:28px;
+              }
+            }
         }
-      }
     }
-  }
-  .sj_header{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#fff;
-  }
-  .sj_user_box{
-    width:auto;
-    position: absolute;
-    top:0;right:20px;
-    line-height:64px;
-    .avatar{
-      cursor: pointer;
+    .sj_header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 901;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, .08);
     }
-    a{
-      padding:0 4px;
+    .sj_user_box {
+        width: auto;
+        position: absolute;
+        top: 0;
+        right: 20px;
+        line-height: 64px;
+        .avatar {
+            cursor: pointer;
+        }
+        a {
+            padding: 0 4px;
+            cursor: pointer;
+        }
     }
-  }
 }
+
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+    transition: opacity 0.5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
+
+.fade-enter,
+.fade-leave-to
+/* .fade-leave-active below version 2.1.8 */
+
+    {
+    opacity: 0;
 }

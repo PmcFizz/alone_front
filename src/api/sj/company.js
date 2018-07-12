@@ -67,10 +67,10 @@ export function updateOne (data) {
   })
 }
 
-// 分页查询
-export function queryByPage (data) {
+// 关键词搜索公司
+export function queryCompanyByKeyWord (data) {
   return fetch({
-    url: '/api/company/queryByPage',
+    url: '/api/company/queryCompanyByKeyWord',
     method: 'post',
     data
   })
