@@ -61,6 +61,16 @@ export default new Router({
       path: '/sj/interfaceDoc',
       name: 'sjInterfaceDoc',
       component: _import('interfaceDoc/sj_interface')
+    },
+    {
+      path: '/sj/evaluate',
+      name: 'sjEvaluate',
+      component: _import('shijiang/sj_evaluate')
+    },
+    {
+      path: '/sj/company/:id',
+      name: 'sjCompany',
+      component: _import('shijiang/sj_company')
     }
   ]
 })

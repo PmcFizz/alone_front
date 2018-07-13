@@ -14,9 +14,9 @@ export function queryCompanyById (data) {
 }
 
 // 公司公共查询
-export function commonQuery (data) {
+export function commonQueryCompany (data) {
   return fetch({
-    url: '/api/company/queryById',
+    url: '/api/company/commonQuery',
     method: 'post',
     data
   })
@@ -32,7 +32,7 @@ export function queryCompanyByPage (data) {
 }
 
 // 单个创建
-export function createOne (data) {
+export function createOneCompany (data) {
   return fetch({
     url: '/api/company/createOne',
     method: 'post',
@@ -41,7 +41,7 @@ export function createOne (data) {
 }
 
 // 批量创建
-export function batchCreate (data) {
+export function batchCreateCompany (data) {
   return fetch({
     url: '/api/company/batchCreate',
     method: 'post',
@@ -50,7 +50,7 @@ export function batchCreate (data) {
 }
 
 // 删除一个公司
-export function delOne (data) {
+export function delOneCompany (data) {
   return fetch({
     url: '/api/company/delOne',
     method: 'post',
@@ -59,18 +59,9 @@ export function delOne (data) {
 }
 
 // 更新一个公司
-export function updateOne (data) {
+export function updateOneCompany (data) {
   return fetch({
     url: '/api/company/updateOne',
-    method: 'post',
-    data
-  })
-}
-
-// 关键词搜索公司
-export function queryCompanyByKeyWord (data) {
-  return fetch({
-    url: '/api/company/queryCompanyByKeyWord',
     method: 'post',
     data
   })

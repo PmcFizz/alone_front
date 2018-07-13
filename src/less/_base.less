@@ -1,41 +1,41 @@
 @viewport {
-  width: device-width;
+    width: device-width;
 }
 
 html {
-  background-color: #fff;
-  box-sizing: border-box;
-  width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 * {
-  &:before,
-  &:after {
-    box-sizing: inherit;
-  }
-  outline: none;
-  padding: 0px;
-  margin: 0px;
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+    outline: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  color: #6B6B6B;
-  font-family: apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
-  overflow-x: hidden;
-  text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: #6B6B6B;
+    font-family: apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
 }
 
 a {
-  background: transparent;
-  color: #1E3562;
-  text-decoration: none;
-  transition: color .2s;
+    background: transparent;
+    color: #1E3562;
+    text-decoration: none;
+    transition: color .2s;
 }
 
 img {
-  height: auto;
-  max-width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 h1,
@@ -44,117 +44,156 @@ h3,
 h4,
 h5,
 h6 {
-  //font-family: $font-family-display;
-  font-weight: normal;
+    //font-family: $font-family-display;
+    font-weight: normal;
 }
 
 .float-left {
-  float: left;
+    float: left;
 }
 
 .float-right {
-  float: right;
+    float: right;
 }
 
 .text_left {
-  text-align: left;
+    text-align: left;
 }
 
 .text_right {
-  text-align: right;
+    text-align: right;
 }
 
 .text_center {
-  text-align: center;
+    text-align: center;
 }
 
 .hide {
-  display: none;
+    display: none;
 }
 
 .show {
-  display: block;
+    display: block;
 }
 
 .marginTop10 {
-  margin-top: 10px;
+    margin-top: 10px;
+}
+
+.marginTop20 {
+    margin-top: 20px;
 }
 
 .marginBottom10 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.marginBottom20 {
+    margin-bottom: 20px;
 }
 
 .marginLeft10 {
-  margin-left: 10px;
+    margin-left: 10px;
+}
+
+.marginLeft20 {
+    margin-left: 20px;
 }
 
 .marginRight10 {
-  margin-right: 10px;
+    margin-right: 10px;
+}
+
+.marginRight20 {
+    margin-right: 20px;
 }
 
 .container {
-  position: relative;
-  width: 750px;
-  padding: 0 16px;
-  margin: 10px auto;
-  min-height: 200px;
-  .form-wrap {
-    width: 530px;
-    margin: 0 auto;
-    .form-controller {
-      position: relative;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      width: 530px;
-      font-size: 14px;
-      background: #fff;
-      border-radius: 3px;
-      box-sizing: border-box;
-      transition: background .2s, border .2s;
-      margin-bottom: 12px;
-      .common-input {
-        padding: 0;
-        overflow: hidden;
-        font-family: inherit;
-        font-size: inherit;
-        font-weight: inherit;
-        background: transparent;
-        border: 1px solid #ebebeb;
-        outline: none;
-        resize: none;
-        color: #1a1a1a;
-        width: 100%;
-        margin-left: 0;
-        height: 30px;
-        margin-top: 2px;
-        margin-bottom: 2px;
-        line-height: 24px;
-        padding: 8px;
-        border-radius: 4px;
-        &:focus {
-          border: 1px solid #0084ff;
+    position: relative;
+    width: 750px;
+    padding: 0 16px;
+    margin: 10px auto;
+    min-height: 200px;
+    .form-wrap {
+        width: 530px;
+        margin: 0 auto;
+        .form-controller {
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            width: 530px;
+            font-size: 14px;
+            background: #fff;
+            border-radius: 3px;
+            box-sizing: border-box;
+            transition: background .2s, border .2s;
+            margin-bottom: 12px;
+            .common-input {
+                padding: 0;
+                overflow: hidden;
+                font-family: inherit;
+                font-size: inherit;
+                font-weight: inherit;
+                background: transparent;
+                border: 1px solid #ebebeb;
+                outline: none;
+                resize: none;
+                color: #1a1a1a;
+                width: 100%;
+                margin-left: 0;
+                height: 30px;
+                margin-top: 2px;
+                margin-bottom: 2px;
+                line-height: 24px;
+                padding: 8px;
+                border-radius: 4px;
+                &:focus {
+                    border: 1px solid #0084ff;
+                }
+            }
         }
-      }
     }
-  }
-  .sub_btn {
-    width: 232px;
-    margin-top: 28px;
-    margin-right: auto;
-    margin-left: auto;
-    font-size: 14px;
-    line-height: 32px;
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid;
-    border-radius: 3px;
-    outline: none;
-    padding: 2px 5px;
-    color: #fff;
-    background-color: #0084ff;
-    &:hover{
-      background-color:rgba(0, 132, 255, 0.94);
+    .sub_btn {
+        width: 232px;
+        margin-top: 28px;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 14px;
+        line-height: 32px;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid;
+        border-radius: 3px;
+        outline: none;
+        padding: 2px 5px;
+        color: #fff;
+        background-color: #0084ff;
+        &:hover {
+            background-color: rgba(0, 132, 255, 0.94);
+        }
     }
-  }
+}
+
+// 限制一行
+.limitOneRow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 限制两行
+.limitTwoRow {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
+    overflow: hidden;
+}
+
+// 限制三行
+.limitThreeRow {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; 
+    overflow: hidden;
 }

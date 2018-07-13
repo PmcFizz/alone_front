@@ -51,7 +51,7 @@
     }
   }
 </script>
-<style lang="less">
+<style lang="less" scoped>
   .sj_ask {
     background-color: #fff;
     padding: 0;
