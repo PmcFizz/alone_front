@@ -66,3 +66,12 @@ export function updateOne (data) {
     data
   })
 }
+
+// 获取公司评论
+export function queryCompanyEvaluate (data) {
+  return fetch({
+    url: '/api/evaluate/queryCompanyEvaluate',
+    method: 'post',
+    data
+  })
+}

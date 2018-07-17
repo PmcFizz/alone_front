@@ -1,26 +1,6 @@
 <!--职场首页 -->
 <template>
   <div class="sj_index">
-    <Header class="sj_header">
-      <div class="sj_user_box">
-        <div v-if="isLogin">
-          <Dropdown style="margin-left: 20px">
-            <a href="javascript:void(0)" @click="jumpTo('userManage')">
-              <Avatar icon="person" class="avatar" />
-              <span>{{userInfo.nickName}}</span>
-            </a>
-            <DropdownMenu slot="list">
-              <DropdownItem @click.native="jumpTo('userManage')">我的信息</DropdownItem>
-              <DropdownItem @click.native="logout()">注销</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </div>
-        <div v-else>
-          <router-link :to="{name:'sjLogin'}">登录</router-link>
-          <router-link :to="{name:'sjRegister'}">注册</router-link>
-        </div>
-      </div>
-    </Header>
     <div class="container">
       <div class="log_wrap">
         <img :src="logImgSrc" width="270px" height="129px" />
@@ -69,16 +49,11 @@
 <script>
 import user_img from "../../assets/img/user_img2.jpg";
 import logImgSrc from "../../assets/img/sj.png";
-import { queryMyInfo, logout } from "@/api/sj/user";
 import { queryCompanyByPage } from "@/api/sj/company";
 export default {
   name: "sjIndex",
   data() {
     return {
-      isLogin: false,
-      userInfo: {
-        nickName: ""
-      },
       loading1: false,
       logImgSrc,
       searchPlaceholder: "请输入你要查询的公司",
@@ -96,14 +71,6 @@ export default {
   mounted() {
     let self = this;
     self.search();
-    // 获取当前用户信息
-    queryMyInfo({}).then(res => {
-      let data = res.data.data;
-      if (res.data.code === 200) {
-        self.isLogin = true;
-        self.userInfo = res.data.data;
-      }
-    });
   },
   methods: {
     // 搜索分页获取数据
@@ -144,24 +111,8 @@ export default {
         this.filteredList = [];
       }
     },
-    logout() {
-      let self = this;
-      logout().then(res => {
-        let data = res.data.data;
-        if (res.data.code === 200) {
-          // 注销成功
-          document.location.reload();
-        } else {
-          this.$Message.error(data.msg);
-        }
-      });
-    },
     confirm() {
       alert(1);
-    },
-    // 路由跳转
-    jumpTo(name) {
-      this.$router.push(name);
     },
     toCompanyPage(id){
       this.$router.push({name:'sjCompany',params:{id:id}});

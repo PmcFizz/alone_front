@@ -15,8 +15,8 @@
         取消
       </a>
       <Form ref="user" :model="user" :rules="ruleValidate" :label-width="80">
-        <FormItem label="用户名" prop="nickName">
-          <Input v-model="user.nickName" placeholder="请输入用户名" v-if="isEdit"></Input>
+        <FormItem label="昵称" prop="nickName">
+          <Input v-model="user.nickName" placeholder="请输入昵称" v-if="isEdit"></Input>
           <span v-else>{{user.nickName}}</span>
         </FormItem>
         <FormItem label="手机号" prop="phoneNo">
@@ -36,10 +36,19 @@
 </template>
 <script>
 import { queryMyInfo, updateUserInfo } from "@/api/sj/user";
+import { isPhoneNumber } from "@/utils/validate";
+import util from '@/utils/util';
 
 export default {
   name: "sjUserManage",
   data() {
+    const validatePhoneNo = (rule, value, callback) => {
+      if (!isPhoneNumber(value)) {
+        callback(new Error("手机号必须是11位数字"));
+      } else {
+        callback();
+      }
+    };
     return {
       isEdit: false,
       user: {
@@ -51,7 +60,7 @@ export default {
         nickName: [
           {
             required: true,
-            message: "用户名不能为空",
+            message: "昵称不能为空",
             trigger: "blur"
           }
         ],
@@ -60,12 +69,16 @@ export default {
             required: true,
             message: "手机号不能为空",
             trigger: "blur"
+          },
+          {
+            validator: validatePhoneNo,
+            trigger: "blur"
           }
         ],
         email: [
           {
-            required: true,
-            message: "邮箱不能为空",
+            type: "email",
+            message: "邮箱格式不正确",
             trigger: "blur"
           }
         ]
@@ -102,7 +115,7 @@ export default {
     // 更新用户信息
     submitForm(ref) {
       let self = this;
-      if (this.handleSubmit(ref)) {
+      if (util.handleSubmit(self,ref)) {
         updateUserInfo(this.user).then(res => {
           if (res.data.code == 200) {
             self.$Message.success(res.data.data.msg);
@@ -112,16 +125,6 @@ export default {
           }
         });
       }
-    },
-    handleSubmit(name) {
-      let isCorrect;
-      this.$refs[name].validate(valid => {
-        isCorrect = valid;
-      });
-      return isCorrect;
-    },
-    handleReset(name) {
-      this.$refs[name].resetFields();
     }
   }
 };
