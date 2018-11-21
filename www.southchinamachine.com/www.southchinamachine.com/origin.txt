@@ -1,0 +1,276 @@
+Uri: http://www.southchinamachine.com/
+File Name: F:\12\www.southchinamachine.com\index.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/jzcusstyle.jsp?colId=2&extId=0&_csw=0
+File Name: F:\12\www.southchinamachine.com\jzcusstyle.css
+Content Type: text/css
+
+Uri: http://www.southchinamachine.com/col.jsp?id=105
+File Name: F:\12\www.southchinamachine.com\col.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/col.jsp?id=102
+File Name: F:\12\www.southchinamachine.com\col-1.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/col.jsp?id=104
+File Name: F:\12\www.southchinamachine.com\col-2.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/col.jsp?id=103
+File Name: F:\12\www.southchinamachine.com\col-3.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/col.jsp?id=106
+File Name: F:\12\www.southchinamachine.com\col-4.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/?m1145pageno=2
+File Name: F:\12\www.southchinamachine.com\index-1.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/index.jsp
+File Name: F:\12\www.southchinamachine.com\index-2.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/msgBoard.jsp
+File Name: F:\12\www.southchinamachine.com\msgBoard.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/qrCode.jsp?cmd=mobiQR&_s=100&lanCode=&foreColor=%23000000&qrCodeIconID=
+File Name: F:\12\www.southchinamachine.com\qrCode.png
+Content Type: image/png
+
+Uri: http://16424715.s21i.faiusr.com/2/ABUIABACGAAglK-P3wUog5Xq7AQwgA84oAY.jpg
+File Name: F:\12\www.southchinamachine.com\2\ABUIABACGAAglK-P3wUog5Xq7AQwgA84oAY.jpeg
+Content Type: image/jpeg
+
+Uri: http://16424715.s21i.faiusr.com/2/ABUIABACGAAg7pO_3wUonpOGmgIwgA84mwc.jpg
+File Name: F:\12\www.southchinamachine.com\2\ABUIABACGAAg7pO_3wUonpOGmgIwgA84mwc.jpeg
+Content Type: image/jpeg
+
+Uri: http://16424715.s21i.faiusr.com/2/ABUIABACGAAg-_u53wUokI391QQwgA84wgU.jpg
+File Name: F:\12\www.southchinamachine.com\2\ABUIABACGAAg-_u53wUokI391QQwgA84wgU.jpeg
+Content Type: image/jpeg
+
+Uri: http://15114613.s61i.faiusr.com/2/AD0I9cKaBxACGAAgx9abzwUosKGltQUwQDjYAQ.jpg
+File Name: F:\12\www.southchinamachine.com\2\AD0I9cKaBxACGAAgx9abzwUosKGltQUwQDjYAQ.jpeg
+Content Type: image/jpeg
+
+Uri: http://15114613.s61i.faiusr.com/2/AD0I9cKaBxACGAAgwdabzwUo1oHl4gMwgA84kgM.jpg
+File Name: F:\12\www.southchinamachine.com\2\AD0I9cKaBxACGAAgwdabzwUo1oHl4gMwgA84kgM.jpeg
+Content Type: image/jpeg
+
+Uri: http://www.southchinamachine.com/jzcusstyle.jsp?colId=105&extId=0&_csw=0
+File Name: F:\12\www.southchinamachine.com\jzcusstyle-1.css
+Content Type: text/css
+
+Uri: http://www.southchinamachine.com/jzcusstyle.jsp?colId=102&extId=0&_csw=0
+File Name: F:\12\www.southchinamachine.com\jzcusstyle-2.css
+Content Type: text/css
+
+Uri: http://www.southchinamachine.com/jzcusstyle.jsp?colId=104&extId=0&_csw=0
+File Name: F:\12\www.southchinamachine.com\jzcusstyle-3.css
+Content Type: text/css
+
+Uri: http://www.southchinamachine.com/nr.jsp
+File Name: F:\12\www.southchinamachine.com\nr.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=11
+File Name: F:\12\www.southchinamachine.com\nd.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=14
+File Name: F:\12\www.southchinamachine.com\nd-1.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=7
+File Name: F:\12\www.southchinamachine.com\nd-2.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=6
+File Name: F:\12\www.southchinamachine.com\nd-3.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=5
+File Name: F:\12\www.southchinamachine.com\nd-4.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=4
+File Name: F:\12\www.southchinamachine.com\nd-5.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=3
+File Name: F:\12\www.southchinamachine.com\nd-6.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=2
+File Name: F:\12\www.southchinamachine.com\nd-7.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=1
+File Name: F:\12\www.southchinamachine.com\nd-8.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=15
+File Name: F:\12\www.southchinamachine.com\nd-9.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=12
+File Name: F:\12\www.southchinamachine.com\nd-10.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=10
+File Name: F:\12\www.southchinamachine.com\nd-11.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=8
+File Name: F:\12\www.southchinamachine.com\nd-12.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/jzcusstyle.jsp?colId=103&extId=0&_csw=0
+File Name: F:\12\www.southchinamachine.com\jzcusstyle-4.css
+Content Type: text/css
+
+Uri: http://www.southchinamachine.com/jzcusstyle.jsp?colId=106&extId=0&_csw=0
+File Name: F:\12\www.southchinamachine.com\jzcusstyle-5.css
+Content Type: text/css
+
+Uri: http://www.southchinamachine.com/?m1145pageno=1
+File Name: F:\12\www.southchinamachine.com\index-3.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/index.jsp?m1145pageno=2
+File Name: F:\12\www.southchinamachine.com\index-4.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/jzcusstyle.jsp?colId=9&extId=0&_csw=0
+File Name: F:\12\www.southchinamachine.com\jzcusstyle-6.css
+Content Type: text/css
+
+Uri: http://www.southchinamachine.com/jzcusstyle.jsp?colId=21&extId=0&_csw=0
+File Name: F:\12\www.southchinamachine.com\jzcusstyle-7.css
+Content Type: text/css
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=11&groupId=-1
+File Name: F:\12\www.southchinamachine.com\nd-13.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nr.jsp?groupId=2&_np=0_31
+File Name: F:\12\www.southchinamachine.com\nr-1.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=14&groupId=-1
+File Name: F:\12\www.southchinamachine.com\nd-14.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=7&groupId=-1
+File Name: F:\12\www.southchinamachine.com\nd-15.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nr.jsp?groupId=1&_np=0_31
+File Name: F:\12\www.southchinamachine.com\nr-2.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=6&groupId=-1
+File Name: F:\12\www.southchinamachine.com\nd-16.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=5&groupId=-1
+File Name: F:\12\www.southchinamachine.com\nd-17.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=4&groupId=-1
+File Name: F:\12\www.southchinamachine.com\nd-18.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=3&groupId=-1
+File Name: F:\12\www.southchinamachine.com\nd-19.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=2&groupId=-1
+File Name: F:\12\www.southchinamachine.com\nd-20.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=1&groupId=-1
+File Name: F:\12\www.southchinamachine.com\nd-21.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=15&groupId=-1
+File Name: F:\12\www.southchinamachine.com\nd-22.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=12&groupId=-1
+File Name: F:\12\www.southchinamachine.com\nd-23.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=10&groupId=-1
+File Name: F:\12\www.southchinamachine.com\nd-24.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=8&groupId=-1
+File Name: F:\12\www.southchinamachine.com\nd-25.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/jzcusstyle.jsp?colId=7&extId=0&_csw=0
+File Name: F:\12\www.southchinamachine.com\jzcusstyle-8.css
+Content Type: text/css
+
+Uri: http://www.southchinamachine.com/index.jsp?m1145pageno=1
+File Name: F:\12\www.southchinamachine.com\index-5.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=11&groupId=2&_ngc=-1
+File Name: F:\12\www.southchinamachine.com\nd-26.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=14&groupId=2&_ngc=-1
+File Name: F:\12\www.southchinamachine.com\nd-27.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=15&groupId=2&_ngc=-1
+File Name: F:\12\www.southchinamachine.com\nd-28.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=12&groupId=2&_ngc=-1
+File Name: F:\12\www.southchinamachine.com\nd-29.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=10&groupId=2&_ngc=-1
+File Name: F:\12\www.southchinamachine.com\nd-30.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=8&groupId=2&_ngc=-1
+File Name: F:\12\www.southchinamachine.com\nd-31.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=7&groupId=1&_ngc=-1
+File Name: F:\12\www.southchinamachine.com\nd-32.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=6&groupId=1&_ngc=-1
+File Name: F:\12\www.southchinamachine.com\nd-33.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=5&groupId=1&_ngc=-1
+File Name: F:\12\www.southchinamachine.com\nd-34.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=4&groupId=1&_ngc=-1
+File Name: F:\12\www.southchinamachine.com\nd-35.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=3&groupId=1&_ngc=-1
+File Name: F:\12\www.southchinamachine.com\nd-36.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=2&groupId=1&_ngc=-1
+File Name: F:\12\www.southchinamachine.com\nd-37.html
+Content Type: text/html
+
+Uri: http://www.southchinamachine.com/nd.jsp?id=1&groupId=1&_ngc=-1
+File Name: F:\12\www.southchinamachine.com\nd-38.html
+Content Type: text/html
+
